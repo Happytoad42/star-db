@@ -1,0 +1,15 @@
+.error-display {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.error-display span {
+  margin: 0.5em 0;
+}
+
+.boom {
+  font-size: 24px;
+  color: orangered;
+}
