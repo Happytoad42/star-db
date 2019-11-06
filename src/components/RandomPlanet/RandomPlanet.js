@@ -69,7 +69,7 @@ const PlanetView = ({ planet }) => {
   const { id, name, population, rotationPeriod, diameter } = planet;
 
   return (
-    <>
+    <div className='random-planet jumbotron rounded'>
       <img
         className='planet-image'
         src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
@@ -92,6 +92,6 @@ const PlanetView = ({ planet }) => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };

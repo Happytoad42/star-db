@@ -12,7 +12,7 @@ export default class PersonDetails extends Component {
 
   swapiSerice = new SwapiService();
 
-  componentDidUMount() {
+  componentDidMount() {
     this.getPersonData();
   }
 
