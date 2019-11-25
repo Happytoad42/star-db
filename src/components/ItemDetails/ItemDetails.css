@@ -1,3 +1,13 @@
+.item-details {
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.item-details img {
+  width: 100%;
+  height: auto;
+}
+
 .person-details {
   display: flex;
   margin-top: 1rem;

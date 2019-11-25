@@ -29,14 +29,26 @@ export default class SwapiService {
     return this._transformPerson(person);
   };
 
+  getPersonImage = ({ id }) => {
+    return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
+  };
+
   getPlanet = async id => {
     const planet = await this.GetResource(`/planets/${id}`);
     return this._transformPlanet(planet);
   };
 
+  getPlanetImage = ({ id }) => {
+    return `https://starwars-visualguide.com/assets/img/planets/${id}.jpg`;
+  };
+
   getStarship = async id => {
-    const starship = await this.GetResource(`/starship/${id}`);
+    const starship = await this.GetResource(`/starships/${id}/`);
     return this._transformStarship(starship);
+  };
+
+  getStarshipImage = ({ id }) => {
+    return `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
   };
 
   _extractId = item => {
