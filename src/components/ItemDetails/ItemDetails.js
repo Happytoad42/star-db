@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Spinner from '../Spinner/Spinner';
 
 import './ItemDetails.css';
 
@@ -69,7 +68,7 @@ export default class ItemDetails extends Component {
 }
 
 const ItemView = ({ item, image }) => {
-  const { name, gender, birthYear, eyeColor } = item;
+  const { name } = item;
   return (
     <>
       <img className='person-image' src={image} alt={`${name}`} />

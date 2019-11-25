@@ -28,3 +28,14 @@
 .person-details .list-group-item .term {
   margin-right: 0.5rem;
 }
+
+@media (min-width: 768px) {
+  .item-details {
+    flex-flow: row;
+  }
+
+  .item-details img {
+    width: 30%;
+    height: 100%;
+  }
+}
