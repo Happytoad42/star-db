@@ -66,17 +66,3 @@ export default class ItemDetails extends Component {
     );
   }
 }
-
-const ItemView = ({ item, image }) => {
-  const { name } = item;
-  return (
-    <>
-      <img className='person-image' src={image} alt={`${name}`} />
-
-      <div className='card-body'>
-        <h4>{name}</h4>
-        <ul className='list-group list-group-flush'>{this.props.children}</ul>
-      </div>
-    </>
-  );
-};

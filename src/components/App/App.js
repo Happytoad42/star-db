@@ -4,35 +4,29 @@ import RandomPlanet from '../RandomPlanet/RandomPlanet';
 import SwapiService from '../../services/SwapiService';
 import { SwapiServiceProvider } from '../swapi-service-context';
 
-import {
-  PersonList,
-  PlanetList,
-  StarshipList,
-  PersonDetails,
-  PlanetDetails,
-  StarshipDetails
-} from '../sw-components';
+import { PeoplePage, PlanetsPage, StarshipsPage } from '../../components/pages';
 
 import './App.css';
 
 export default class App extends Component {
-  swapiService = new SwapiService();
-
   state = {
-    curentPerson: null
+    curentPerson: null,
+    swapiService: new SwapiService()
+  };
+
+  onServiceChange = () => {
+    console.log('Change context value');
   };
 
   render() {
     return (
-      <SwapiServiceProvider value={this.swapiService}>
+      <SwapiServiceProvider value={this.state.swapiService}>
         <div className='container'>
-          <Header />
-          <PersonDetails itemId={11} />
-          <PlanetDetails itemId={5} />
-          <StarshipDetails itemId={9} />
-          <PersonList />
-          <StarshipList />
-          <PlanetList />
+          <Header onServiceChange={this.onServiceChange} />
+          <RandomPlanet />
+          <PeoplePage />
+          <PlanetsPage />
+          <StarshipsPage />
         </div>
       </SwapiServiceProvider>
     );
