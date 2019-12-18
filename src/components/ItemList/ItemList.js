@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { withData } from '../HOC-helpers';
 import SwapiService from '../../services/SwapiService';
 import './ItemList.css';
